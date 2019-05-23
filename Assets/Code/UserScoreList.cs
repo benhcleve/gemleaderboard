@@ -14,7 +14,6 @@ public class UserScoreList : MonoBehaviour
     void Start()
     {
         scoreManager = GameObject.FindObjectOfType<ScoreManager>();
-        lastChangeCounter = scoreManager.GetChangeCounter();
         }
     void Update()
     {
@@ -28,7 +27,7 @@ public class UserScoreList : MonoBehaviour
             return;
         }
          lastChangeCounter = scoreManager.GetChangeCounter();
-
+         
         while(this.transform.childCount > 0) {
             Transform c = this.transform.GetChild(0);
             c.SetParent(null);
@@ -40,12 +39,13 @@ public class UserScoreList : MonoBehaviour
         //Finds Components for each UserEntry and changes text accordingly
         foreach(string name in names) {
             GameObject go = (GameObject)Instantiate(UserEntryPrefab);
-            int rank = System.Array.IndexOf(names ,name) + 1;
+            int rank = System.Array.IndexOf(names, name) + 1;
             go.transform.SetParent(this.transform);
             go.transform.Find ("UserName").GetComponent<TextMeshProUGUI>().text = name;
             go.transform.Find ("UserScore").GetComponent<TextMeshProUGUI>().text = scoreManager.GetScore(name, "Gems").ToString();
             go.transform.Find ("UserRank").GetComponent<TextMeshProUGUI>().text = rank.ToString();
         }
+
     }
     
 }

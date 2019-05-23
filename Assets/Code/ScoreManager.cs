@@ -20,6 +20,14 @@ public class ScoreManager : MonoBehaviour
         SetScore("Wendy" , "Gems", 19);
         SetScore("Frank" , "Gems", 77);
         SetScore("Patty" , "Gems", 47);
+        SetScore("fasfdsaf", "Gems", 267);
+        SetScore("dfsadfas", "Gems", 300);
+        SetScore("dfsafsdaf", "Gems", 112);
+        SetScore("dfsafdsaf", "Gems", 4);
+        SetScore("ffff", "Gems", 16);
+        SetScore("aaaa" , "Gems", 19);
+        SetScore("bbbb" , "Gems", 77);
+        SetScore("cccc" , "Gems", 47);
 
     }
 
