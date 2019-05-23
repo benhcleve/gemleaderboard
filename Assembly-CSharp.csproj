@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\PageManager.cs" />
      <Compile Include="Assets\Code\ScoreManager.cs" />
      <Compile Include="Assets\Code\UserScoreList.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
